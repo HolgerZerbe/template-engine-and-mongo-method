@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>index</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>Filter by user</h1>
+    <ul class="button-group">
+      <a class="btn btn-outline-primary" href="/">
+        All
+      </a>
+      {{#each users}}
+        <a class="btn btn-outline-primary" href="/{{id}}">
+          {{email}}
+        </a>
+      {{/each}}
+    </ul>
+
+    <h1>Aqmpoints</h1>
+    <ul class="list-group">
+      {{#each aqmList}}
+    
+        <li class="list-group-item">
+            <strong>User</strong> {{user.email}}
+          <strong>NOX: </strong> {{aqm.noxevent}}
+          <strong>Time: </strong> {{gps.system_time}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</body>
+</html>
